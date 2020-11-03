@@ -1,0 +1,19 @@
+{
+  "name": "lisavincent_3_03112020",
+  "version": "1.0.0",
+  "description": "Ohmyfood! Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lisavncnt/LisaVincent_3_03112020.git"
+  },
+  "author": "Lisa VINCENT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lisavncnt/LisaVincent_3_03112020/issues"
+  },
+  "homepage": "https://github.com/lisavncnt/LisaVincent_3_03112020#readme"
+}
