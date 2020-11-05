@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&family=Shrikhand&display=swap');
 
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
@@ -33,13 +33,51 @@ main {
     background-color: $font-light;
     filter: brightness(95%);
     box-shadow: inset 0px 14px 11px -10px #A2A2A2;
-    padding: 2rem;
+    padding: 1.8rem;
     color: #444;
     .main_icon {
-        margin: 10px 25px 0 0;
-        font-size: 2.1rem;
+        padding: 25px 20px 0 0;
+        font-size: 2.5rem;
     }
+    p {
+        font-size: 35px;
+        padding-right: 35px;
+    }
+}
+
+/*SECTION RESERVATION*/
+
+@mixin btn_primary {
+    color: #fff;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    box-shadow: 0px 5px 6px 1px rgba(162,162,162,0.5);
+    background-image:-moz-linear-gradient(to bottom right, $color-secondary, $color-primary);
+    background-image:-o-linear-gradient(to bottom right, $color-secondary, $color-primary);
+    background-image:-webkit-linear-gradient(to bottom right, $color-secondary, $color-primary);
+    background-image:linear-gradient(to bottom right, $color-secondary, $color-primary);
+}
+
+.reservation {
+    text-align: center;
+    background-color: $font-light;
+    padding: 60px 0;
     h2 {
-        font-size: 25px;
+        margin: 0;
+        font-size: 40px;
+        font-weight: 900;
+    }
+    p {
+        font-size: 22px;
+        color: $font-light;
+        filter: brightness(25%);
+        font-weight: 100;
+    }
+    .btn {
+        @include btn_primary();
+        margin: 20px 0;
     }
 }
