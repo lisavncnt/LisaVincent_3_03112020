@@ -1,74 +1,121 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&family=Shrikhand&display=swap");
-@media screen and (min-width: 320px) and (max-width: 700px) {
-  body {
-    margin: 0;
-    box-sizing: border-box;
-  }
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap");
+/*Color definition*/
+/*sizing website*/
+body {
+  margin: auto;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
 
-  * {
-    font-family: "Roboto", sans-serif;
-  }
+/*Buttons mixins*/
+/*Loading spinner*/
+.loading {
+  visibility: hidden;
+}
 
-  /*HEADER*/
-  header {
-    text-align: center;
-  }
-  header h1 {
-    font-family: "Shrikhand", cursive;
-    font-size: 60px;
-  }
+/*HEADER*/
+header {
+  font-family: "Shrikhand", cursive;
+}
+header h1 {
+  margin: 0 0 1rem 0;
+}
 
-  /*MAIN*/
-  main {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #F5F5F5;
-    filter: brightness(95%);
-    box-shadow: inset 0px 14px 11px -10px #A2A2A2;
-    color: #444;
-  }
-  main .main_icon {
-    padding: 25px 20px 0 0;
-    font-size: 2rem;
-  }
-  main p {
-    font-size: 30px;
-    padding-right: 35px;
-  }
+/*MAIN*/
+main {
+  background: #f2f2f2;
+  filter: brightness(95%);
+  box-shadow: inset 0px 5px 5px -5px #A2A2A2;
+  display: flex;
+  justify-content: center;
+  padding: 5px 0;
+}
+main .fa-map-marker-alt {
+  position: relative;
+  top: 0.9rem;
+  right: 0.9rem;
+  color: #f2f2f2;
+  filter: brightness(30%);
+}
 
-  /*SECTION RESERVATION*/
-  .reservation {
-    text-align: center;
-    background-color: #F5F5F5;
-    padding: 60px 0;
-  }
-  .reservation h2 {
-    margin: 0;
-    font-size: 40px;
-    font-weight: 900;
-  }
-  .reservation p {
-    font-size: 22px;
-    color: #F5F5F5;
-    filter: brightness(25%);
-    font-weight: 100;
-  }
-  .reservation .btn {
-    color: #fff;
-    padding: 15px;
-    border-radius: 50px;
-    border: none;
-    padding: 20px;
-    font-size: 20px;
-    box-shadow: 0px 5px 6px 1px rgba(162, 162, 162, 0.5);
-    background-image: -moz-linear-gradient(to bottom right, #FF79DA, #9356DC);
-    background-image: -o-linear-gradient(to bottom right, #FF79DA, #9356DC);
-    background-image: -webkit-linear-gradient(to bottom right, #FF79DA, #9356DC);
-    background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-    margin: 20px 0;
-    cursor: pointer;
-  }
+/*SECTION RESERVATION*/
+.reservation {
+  background-color: #f2f2f2;
+  padding: 30px 0;
+}
+.reservation h2 {
+  margin: 0;
+}
+.reservation p {
+  font-weight: 300;
+}
+.reservation .btn {
+  width: 200px;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  color: #fff;
+  font-weight: 500;
+  /*Linear gradient for all web-browser*/
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: -moz-linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: -webkit-linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: -ms-linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: -o-linear-gradient(to bottom right, #FF79DA, #9356DC);
+  /*Box shadow for all web-browser*/
+  box-shadow: 0px 3px 8px 1px #BDBDBD;
+  -webkit-box-shadow: 0px 3px 8px 1px #BDBDBD;
+  -moz-box-shadow: 0px 3px 8px 1px #BDBDBD;
+  -ms-box-shadow: 0px 3px 8px 1px #BDBDBD;
+  -o-box-shadow: 0px 3px 8px 1px #BDBDBD;
+  cursor: pointer;
+}
+
+/*SECTION FUNCTION*/
+.function {
+  margin: 15px;
+}
+.function h2 {
+  text-align: left;
+}
+.function .choice span {
+  position: relative;
+  left: 1rem;
+  background-color: #9356DC;
+  padding: 3px 8px;
+  border-radius: 50%;
+  color: #fff;
+}
+.function .choice button {
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+  width: 300px;
+  margin-bottom: 25px;
+  text-align: left;
+  font-weight: bold;
+  box-shadow: 0px 3px 8px 1px #BDBDBD;
+  -webkit-box-shadow: 0px 3px 8px 1px #BDBDBD;
+  -moz-box-shadow: 0px 3px 8px 1px #BDBDBD;
+  -ms-box-shadow: 0px 3px 8px 1px #BDBDBD;
+  -o-box-shadow: 0px 3px 8px 1px #BDBDBD;
+}
+.function .choice .choice_icone {
+  position: relative;
+  left: 1rem;
+  padding-right: 2rem;
+  font-size: 1.2rem;
+  color: #f2f2f2;
+  filter: brightness(50%);
+}
+.function .choice:hover button {
+  background-color: rgba(146, 86, 220, 0.1);
+}
+.function .choice:hover .choice_icone {
+  color: #9356DC;
+  filter: brightness(95%);
 }
 
 /*# sourceMappingURL=style.css.map */

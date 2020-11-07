@@ -1,86 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap');
 
-@media screen and (min-width: 320px) and (max-width:700px){
+/*Color definition*/
+$first-color : #9356DC;
+$second-color : #FF79DA;
+$third-color : #99E2D0;
+$light-grey: #f2f2f2;
 
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-third: #99E2D0;
-$font-light: #F5F5F5;
-
+/*sizing website*/
 body {
-    margin: 0;
+    margin: auto;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
 }
 
-* {
-    font-family: 'Roboto', sans-serif;
+/*Buttons mixins*/
+@mixin btn_primary {
+    width: 200px;
+    border: none;
+    border-radius: 50px;
+    padding: 15px;
+    color: #fff;
+    font-weight: 500;
+/*Linear gradient for all web-browser*/
+    background: linear-gradient(to bottom right, $second-color, $first-color);
+    background: -moz-linear-gradient(to bottom right, $second-color, $first-color);
+    background: -webkit-linear-gradient(to bottom right, $second-color, $first-color);
+    background: -ms-linear-gradient(to bottom right, $second-color, $first-color);
+    background: -o-linear-gradient(to bottom right, $second-color, $first-color);
+/*Box shadow for all web-browser*/
+    box-shadow: 0px 3px 8px 1px #BDBDBD;
+    -webkit-box-shadow: 0px 3px 8px 1px #BDBDBD;
+    -moz-box-shadow: 0px 3px 8px 1px #BDBDBD;
+    -ms-box-shadow: 0px 3px 8px 1px #BDBDBD;
+    -o-box-shadow: 0px 3px 8px 1px #BDBDBD;
+}
+
+@mixin btn_choice {
+    span {
+        position: relative;
+        left: 1rem;
+        background-color: $first-color;
+        padding: 3px 8px;
+        border-radius: 50%;
+        color: #fff;
+    }
+    button {
+        background-color: $light-grey;
+        border-radius: 20px;
+        border: none;
+        padding: 20px;
+        width: 300px;
+        margin-bottom: 25px;
+        text-align: left;
+        font-weight: bold;
+
+        box-shadow: 0px 3px 8px 1px #BDBDBD;
+        -webkit-box-shadow: 0px 3px 8px 1px #BDBDBD;
+        -moz-box-shadow: 0px 3px 8px 1px #BDBDBD;
+        -ms-box-shadow: 0px 3px 8px 1px #BDBDBD;
+        -o-box-shadow: 0px 3px 8px 1px #BDBDBD;
+    }
+    .choice_icone {
+        position: relative;
+        left: 1rem;
+        padding-right: 2rem;
+        font-size: 1.2rem;
+        color: $light-grey;
+        filter: brightness(50%);
+    }
+    &:hover {
+        button {
+            background-color: rgba(146, 86, 220, 0.1);
+        }
+        .choice_icone {
+            color: $first-color;
+            filter: brightness(95%);
+        }
+    }
+}
+
+/*Loading spinner*/
+.loading {
+    visibility: hidden;
 }
 
 /*HEADER*/
-
 header {
-    text-align: center;
+    font-family: 'Shrikhand', cursive;
     h1 {
-        font-family: 'Shrikhand', cursive;
-        font-size: 60px;
+        margin: 0 0 1rem 0;
     }
 }
 
 /*MAIN*/
-
 main {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: $font-light;
+    background: $light-grey;
     filter: brightness(95%);
-    box-shadow: inset 0px 14px 11px -10px #A2A2A2;
-    color: #444;
-    .main_icon {
-        padding: 25px 20px 0 0;
-        font-size: 2rem;
-    }
-    p {
-        font-size: 30px;
-        padding-right: 35px;
+    box-shadow: inset 0px 5px 5px -5px #A2A2A2;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 ;
+    .fa-map-marker-alt {
+        position: relative;
+        top: .9rem;
+        right: .9rem;
+        color: $light-grey;
+        filter: brightness(30%);
     }
 }
 
 /*SECTION RESERVATION*/
-
-@mixin btn_primary {
-    color: #fff;
-    padding: 15px;
-    border-radius: 50px;
-    border: none;
-    padding: 20px;
-    font-size: 20px;
-    box-shadow: 0px 5px 6px 1px rgba(162,162,162,0.5);
-    background-image:-moz-linear-gradient(to bottom right, $color-secondary, $color-primary);
-    background-image:-o-linear-gradient(to bottom right, $color-secondary, $color-primary);
-    background-image:-webkit-linear-gradient(to bottom right, $color-secondary, $color-primary);
-    background-image:linear-gradient(to bottom right, $color-secondary, $color-primary);
-}
-
 .reservation {
-    text-align: center;
-    background-color: $font-light;
-    padding: 60px 0;
+    background-color: $light-grey;
+    padding: 30px 0;
     h2 {
         margin: 0;
-        font-size: 40px;
-        font-weight: 900;
     }
     p {
-        font-size: 22px;
-        color: $font-light;
-        filter: brightness(25%);
-        font-weight: 100;
+        font-weight: 300;
     }
     .btn {
         @include btn_primary();
-        margin: 20px 0;
         cursor: pointer;
     }
 }
+
+/*SECTION FUNCTION*/
+.function {
+    margin: 15px;
+    h2 {
+        text-align: left;
+    }
+    .choice {
+        @include btn_choice;
+    }
 }
