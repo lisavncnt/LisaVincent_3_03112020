@@ -25,7 +25,7 @@ header h1 {
 }
 
 /*MAIN*/
-main {
+.main_index {
   background: #f2f2f2;
   filter: brightness(95%);
   box-shadow: inset 0px 5px 5px -5px #A2A2A2;
@@ -33,12 +33,21 @@ main {
   justify-content: center;
   padding: 5px 0;
 }
-main .fa-map-marker-alt {
+.main_index .fa-map-marker-alt {
   position: relative;
   top: 0.9rem;
   right: 0.9rem;
   color: #f2f2f2;
   filter: brightness(30%);
+}
+
+.main_menu {
+  position: relative;
+}
+.main_menu img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
 /*SECTION RESERVATION*/
@@ -170,20 +179,47 @@ main .fa-map-marker-alt {
   top: 20px;
   right: 35px;
 }
-.restaurant .container .loving {
+.restaurant .container .fa-heart {
   position: absolute;
   top: 200px;
   right: 35px;
   font-size: 1.2rem;
-  transition: all 450ms;
-}
-.restaurant .container .loving:hover {
-  transform: scale(1.1);
-  font-weight: bolder;
-  opacity: 1;
+  padding: 0;
+  color: black;
+  cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-text-fill-color: transparent;
+  transition: 450ms;
+}
+.restaurant .container .fa-heart:hover {
+  transform: scale(1.1);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*SECTION MENU*/
+.menu {
+  position: absolute;
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  background-color: #f2f2f2;
+  top: 260px;
+}
+.menu h2 {
+  margin: 0;
+  font-family: "Shrikhand", cursive;
+  padding: 15px;
+  font-weight: lighter;
+}
+.menu h2::first-letter {
+  text-transform: uppercase;
+}
+.menu .fa-heart {
+  position: absolute;
+  top: 25px;
+  right: 15px;
 }
 
 /*FOOTER*/
@@ -219,8 +255,10 @@ main .fa-map-marker-alt {
 /*RESTAURANTS PAGES*/
 /* Header */
 .fa-arrow-left {
-  font-size: 1.4rem;
-  padding-right: 2rem;
+  position: absolute;
+  font-size: 1rem;
+  top: 2.5rem;
+  left: 1.2rem;
 }
 
 /*MEDIA QUERIES*/
