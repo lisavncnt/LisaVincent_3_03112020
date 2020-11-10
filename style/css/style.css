@@ -58,6 +58,7 @@ main .fa-map-marker-alt {
   padding: 15px;
   color: #fff;
   font-weight: 500;
+  cursor: pointer;
   /*Linear gradient for all web-browser*/
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   background: -moz-linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -98,6 +99,8 @@ main .fa-map-marker-alt {
   margin-bottom: 25px;
   text-align: left;
   font-weight: bold;
+  cursor: pointer;
+  /*Box-shadow for all device*/
   box-shadow: 0px 3px 8px 1px #BDBDBD;
   -webkit-box-shadow: 0px 3px 8px 1px #BDBDBD;
   -moz-box-shadow: 0px 3px 8px 1px #BDBDBD;
@@ -141,7 +144,7 @@ main .fa-map-marker-alt {
 .restaurant .container .card {
   background-color: #fff;
   border-radius: 25px;
-  box-shadow: 0px 3px 8px 1px #BDBDBD;
+  box-shadow: 3px 3px 8px 1px #BDBDBD;
   margin: 15px;
 }
 .restaurant .container .card img {
@@ -174,17 +177,27 @@ main .fa-map-marker-alt {
   top: 200px;
   right: 35px;
   font-size: 1.2rem;
+  transition: all 450ms;
+}
+.restaurant .container .loving:hover {
+  transform: scale(1.1);
+  font-weight: bolder;
+  opacity: 1;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
 }
 
 /*FOOTER*/
 .footer {
   background-color: black;
   color: #fff;
+  padding: 1.5rem 0;
 }
 .footer h3 {
   font-family: "Shrikhand", cursive;
   font-weight: lighter;
-  padding: 10px;
+  padding: 0 2rem 1rem 2rem;
   margin: 0;
 }
 .footer a {
@@ -200,6 +213,9 @@ main .fa-map-marker-alt {
 }
 .footer a .footer_icon--first {
   padding-right: 1.4em;
+}
+.footer .mailto, .footer .mailto:visited {
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

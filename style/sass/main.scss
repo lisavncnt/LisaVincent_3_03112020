@@ -21,6 +21,7 @@ body {
     padding: 15px;
     color: #fff;
     font-weight: 500;
+    cursor: pointer;
 /*Linear gradient for all web-browser*/
     background: linear-gradient(to bottom right, $second-color, $first-color);
     background: -moz-linear-gradient(to bottom right, $second-color, $first-color);
@@ -53,7 +54,9 @@ body {
         margin-bottom: 25px;
         text-align: left;
         font-weight: bold;
+        cursor: pointer;
 
+        /*Box-shadow for all device*/
         box-shadow: 0px 3px 8px 1px #BDBDBD;
         -webkit-box-shadow: 0px 3px 8px 1px #BDBDBD;
         -moz-box-shadow: 0px 3px 8px 1px #BDBDBD;
@@ -135,7 +138,7 @@ main {
         text-align: left;
     }
     .choice {
-        @include btn_choice;
+        @include btn_choice();
     }
 }
 
@@ -158,7 +161,7 @@ main {
         .card {
             background-color: #fff;
             border-radius: 25px;
-            box-shadow: 0px 3px 8px 1px #BDBDBD;
+            box-shadow: 3px 3px 8px 1px #BDBDBD;
             margin: 15px;
             img {
                 width: 100%;
@@ -190,8 +193,18 @@ main {
             position: absolute;
             top: 200px;
             right: 35px;
-            font-size: 1.2rem; 
+            font-size: 1.2rem;
+            transition: all 450ms;
+            &:hover {
+                transform: scale(1.10);
+                font-weight: bolder;
+                opacity: 1;
+                background-clip: text;
+                -webkit-background-clip: text;
+                background: linear-gradient(to bottom right, $second-color, $first-color);
+            }
         }
+
     }
 }
 
@@ -199,10 +212,11 @@ main {
 .footer {
     background-color: black;
     color: #fff;
+    padding: 1.5rem 0;
     h3 {
         font-family: 'Shrikhand', cursive;
         font-weight: lighter;
-        padding: 10px;
+        padding: 0 2rem 1rem 2rem;
         margin: 0;
     }
     a {
@@ -218,5 +232,8 @@ main {
                 padding-right: 1.4em;
             }
         }
+    }
+    .mailto, .mailto:visited {
+        color: #fff;
     }
 }
