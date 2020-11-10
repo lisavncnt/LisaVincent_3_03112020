@@ -8,15 +8,17 @@ body {
 }
 
 /*Buttons mixins*/
-/*Loading spinner*/
-.loading {
-  visibility: hidden;
+/*for all links*/
+a, a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 /*HEADER*/
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
+  margin-top: 25px;
 }
 header h1 {
   margin: 0 0 1rem 0;
@@ -137,10 +139,6 @@ main .fa-map-marker-alt {
   position: relative;
   height: auto;
 }
-.restaurant .container a, .restaurant .container a:visited {
-  text-decoration: none;
-  color: black;
-}
 .restaurant .container .card {
   background-color: #fff;
   border-radius: 25px;
@@ -185,7 +183,7 @@ main .fa-map-marker-alt {
   opacity: 1;
   background-clip: text;
   -webkit-background-clip: text;
-  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
 }
 
 /*FOOTER*/
@@ -216,6 +214,80 @@ main .fa-map-marker-alt {
 }
 .footer .mailto, .footer .mailto:visited {
   color: #fff;
+}
+
+/*RESTAURANTS PAGES*/
+/* Header */
+.fa-arrow-left {
+  font-size: 1.4rem;
+  padding-right: 2rem;
+}
+
+/*MEDIA QUERIES*/
+/*adptation for tablet device*/
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+  .function {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .function h2 {
+    width: 100%;
+  }
+  .function .choice {
+    width: 40%;
+  }
+
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .restaurant h2 {
+    width: 100%;
+  }
+  .restaurant .container {
+    width: 50%;
+  }
+  .restaurant .container .loving {
+    top: 210px;
+  }
+}
+/*adaptation for laptop device*/
+@media screen and (min-width: 1025px) {
+  .function {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .function h2 {
+    width: 100%;
+  }
+  .function .choice {
+    width: 33%;
+  }
+
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .restaurant h2 {
+    width: 100%;
+  }
+  .restaurant .container {
+    width: 50%;
+  }
+  .restaurant .container .card img {
+    height: 250px;
+  }
+  .restaurant .container .loving {
+    top: 290px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
