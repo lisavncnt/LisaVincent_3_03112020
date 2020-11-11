@@ -197,23 +197,22 @@ header {
                 right: 35px;
             }
         }
-        .fa-heart {
-            position: absolute;
+        .loving {
+           position: absolute;
             top: 200px;
             right: 35px;
             font-size: 1.2rem;
             padding: 0;
-            color: black;
             cursor: pointer;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            transition: 450ms;
+            transition: 400ms;
             &:hover {
                 transform: scale(1.10);
-                background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
-	            -webkit-background-clip: text;
-	            -webkit-text-fill-color: transparent;
+                font-weight: bold;
+                background: -webkit-linear-gradient($second-color, $first-color);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                opacity: 1;
+                z-index: 0;
             }
         }
 
@@ -311,6 +310,11 @@ header {
             .loving {
                 top: 210px;
             }
+            .card {
+                .new {
+                    top: 25px;
+                }
+            }
         }
     }
 }
@@ -343,6 +347,9 @@ header {
                 img {
                     height: 250px;
                 }
+            }
+            .new {
+                top: 40px;
             }
             .loving {
                 top: 290px;

@@ -179,24 +179,23 @@ header h1 {
   top: 20px;
   right: 35px;
 }
-.restaurant .container .fa-heart {
+.restaurant .container .loving {
   position: absolute;
   top: 200px;
   right: 35px;
   font-size: 1.2rem;
   padding: 0;
-  color: black;
   cursor: pointer;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 450ms;
+  transition: 400ms;
 }
-.restaurant .container .fa-heart:hover {
+.restaurant .container .loving:hover {
   transform: scale(1.1);
-  background: -webkit-gradient(linear, left top, left bottom, from(#f00), to(#333));
+  font-weight: bold;
+  background: -webkit-linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  opacity: 1;
+  z-index: 0;
 }
 
 /*SECTION MENU*/
@@ -292,6 +291,9 @@ header h1 {
   .restaurant .container .loving {
     top: 210px;
   }
+  .restaurant .container .card .new {
+    top: 25px;
+  }
 }
 /*adaptation for laptop device*/
 @media screen and (min-width: 1025px) {
@@ -322,6 +324,9 @@ header h1 {
   }
   .restaurant .container .card img {
     height: 250px;
+  }
+  .restaurant .container .new {
+    top: 40px;
   }
   .restaurant .container .loving {
     top: 290px;
