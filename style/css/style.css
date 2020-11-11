@@ -2,6 +2,7 @@
 /*Color definition*/
 /*sizing website*/
 body {
+  height: 100%;
   margin: auto;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
@@ -88,10 +89,10 @@ header h1 {
 /*SECTION FUNCTION*/
 .function {
   text-align: center;
-  margin: 15px;
 }
 .function h2 {
   text-align: left;
+  margin: 15px;
 }
 .function .choice span {
   position: relative;
@@ -179,7 +180,8 @@ header h1 {
   top: 20px;
   right: 35px;
 }
-.restaurant .container .loving {
+
+.loving {
   position: absolute;
   top: 200px;
   right: 35px;
@@ -188,37 +190,15 @@ header h1 {
   cursor: pointer;
   transition: 400ms;
 }
-.restaurant .container .loving:hover {
+.loving:hover {
   transform: scale(1.1);
   font-weight: bold;
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
   z-index: 0;
-}
-
-/*SECTION MENU*/
-.menu {
-  position: absolute;
-  width: 100%;
-  border-radius: 25px 25px 0 0;
-  background-color: #f2f2f2;
-  top: 260px;
-}
-.menu h2 {
-  margin: 0;
-  font-family: "Shrikhand", cursive;
-  padding: 15px;
-  font-weight: lighter;
-}
-.menu h2::first-letter {
-  text-transform: uppercase;
-}
-.menu .fa-heart {
-  position: absolute;
-  top: 25px;
-  right: 15px;
 }
 
 /*FOOTER*/
@@ -260,8 +240,103 @@ header h1 {
   left: 1.2rem;
 }
 
+/*Style of all menu*/
+.menu {
+  padding: 0 10px;
+}
+.menu_title {
+  text-transform: uppercase;
+  color: grey;
+  font-weight: 300;
+  font-size: 20px;
+  text-decoration: underline #99E2D0;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/*SECTION MENU*/
+.card_menu {
+  position: relative;
+  top: -2rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 25px 25px 0 0;
+  background-color: #f2f2f2;
+}
+.card_menu h2 {
+  margin: 0;
+  font-family: "Shrikhand", cursive;
+  padding: 15px;
+  font-weight: lighter;
+}
+.card_menu h2::first-letter {
+  text-transform: uppercase;
+}
+.card_menu .fa-heart {
+  position: absolute;
+  top: 25px;
+  font-size: 1.2rem;
+  right: 15px;
+}
+.card_menu .btn_command {
+  width: 200px;
+  border: none;
+  border-radius: 50px;
+  padding: 15px;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  /*Linear gradient for all web-browser*/
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: -moz-linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: -webkit-linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: -ms-linear-gradient(to bottom right, #FF79DA, #9356DC);
+  background: -o-linear-gradient(to bottom right, #FF79DA, #9356DC);
+  /*Box shadow for all web-browser*/
+  box-shadow: 0px 3px 8px 1px #BDBDBD;
+  -webkit-box-shadow: 0px 3px 8px 1px #BDBDBD;
+  -moz-box-shadow: 0px 3px 8px 1px #BDBDBD;
+  -ms-box-shadow: 0px 3px 8px 1px #BDBDBD;
+  -o-box-shadow: 0px 3px 8px 1px #BDBDBD;
+  margin: 40px auto;
+  cursor: pointer;
+}
+
+/*style of all plates proposition*/
+.menu_proposition {
+  position: relative;
+  background-color: #fff;
+  border-radius: 15px;
+  text-align: left;
+  box-shadow: 0px 3px 8px 1px #BDBDBD;
+  padding: 5px 10px;
+  margin: 10px 2px;
+  height: 50px;
+}
+.menu_proposition .menu_description {
+  margin: 4px 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 85%;
+}
+.menu_proposition .menu_description::first-letter {
+  text-transform: uppercase;
+}
+.menu_proposition h3 {
+  font-size: 17px;
+}
+.menu_proposition .price {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+}
+.menu_proposition .btn_okay {
+  visibility: hidden;
+}
+
 /*MEDIA QUERIES*/
-/*adptation for tablet device*/
+/*adaptation for tablet device*/
 @media screen and (min-width: 760px) and (max-width: 1024px) {
   .function {
     display: flex;

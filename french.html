@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <title>Ohmyfood!</title>
         <link rel="stylesheet" href="style/css/style.css">
-        <script src="https://kit.fontawesome.com/6bd32f3ae6.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
     </head>
     
@@ -19,8 +20,97 @@
             <img src="images/french.jpg" alt="A la française">
         </main>
 
-        <section class="menu">
+        <section class="card_menu">
             <h2>à la française</h2>
-            <i class="far fa-heart"></i>
+            <i class="far fa-heart loving"></i>
+
+            <article class="menu">
+                <h3 class="menu_title">entrées</h3>
+
+                <div class="menu_proposition">
+                    <h3 class="menu_description">Tartare de poulpe acidulé</h3>
+                    <p class="menu_description">aux zestes d'orange</p>
+                    <p class="price">25€</p>
+                    <button class="btn_okay"><i class="fas fa-check-circle"></i></button>
+                </div>
+
+                <div class="menu_proposition">
+                    <h3 class="menu_description">Velouté de légumes d'antan</h3>
+                    <p class="menu_description">carotte, panais, topinambour</p>
+                    <p class="price">35€</p>
+                    <button class="btn_okay"><i class="fas fa-check-circle"></i></button>
+                </div>
+
+                <div class="menu_proposition">
+                    <h3 class="menu_description">Soupe à l'oignon</h3>
+                    <p class="menu_description">revisitée</p>
+                    <p class="price">20€</p>
+                    <button class="btn_okay"><i class="fas fa-check-circle"></i></button>
+                </div>
+            </article>
+
+            <article class="menu">
+                <h3 class="menu_title">plats</h3>
+
+                <div class="menu_proposition">
+                    <h3 class="menu_description">Coquilles Saint-Jacques</h3>
+                    <p class="menu_description">accompagnées d'une purée de panais</p>
+                    <p class="price">40€</p>
+                    <button class="btn_okay"><i class="fas fa-check-circle"></i></button>
+                </div>
+
+                <div class="menu_proposition">
+                    <h3 class="menu_description">Magret de canard</h3>
+                    <p class="menu_description">et parmentier de pommes de terre</p>
+                    <p class="price">35€</p>
+                    <button class="btn_okay"><i class="fas fa-check-circle"></i></button>
+                </div>
+
+                <div class="menu_proposition">
+                    <h3 class="menu_description">Pigeonneau d'Ille-et-Vilaine</h3>
+                    <p class="menu_description">sur son lit de gnocchis aux légumes</p>
+                    <p class="price">44€</p>
+                    <button class="btn_okay"><i class="fas fa-check-circle"></i></button>
+                </div>
+            </article>
+
+            <article class="menu">
+                <h3 class="menu_title">desserts</h3>
+
+                <div class="menu_proposition">
+                    <h3 class="menu_description">Pétales de violettes glacées</h3>
+                    <p class="menu_description">et purée de noisettes</p>
+                    <p class="price">18€</p>
+                    <button class="btn_okay"><i class="fas fa-check-circle"></i></button>
+                </div>
+
+                <div class="menu_proposition">
+                    <h3 class="menu_description">Fondant au chocolat</h3>
+                    <p class="menu_description">revisité</p>
+                    <p class="price">22€</p>
+                    <button class="btn_okay"><i class="fas fa-check-circle"></i></button>
+                </div>
+
+                <div class="menu_proposition">
+                    <h3 class="menu_description">Millefeuille croustillant</h3>
+                    <p class="menu_description">myrtilles et pâte d'amande</p>
+                    <p class="price">23€</p>
+                    <button class="btn_okay"><i class="fas fa-check-circle"></i></button>
+                </div>
+            </article>
+
+            <div>
+                <button class="btn_command">Commander</button>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <h3>ohmyfood</h3>
+
+            <a href="#"><i class="fas fa-utensils footer_icon--first"></i>Proposer un restaurant</a>
+            <a href="#"><i class="fas fa-hands-helping footer_icon"></i>Devenir partenaire</a>
+            <a href="#">Mentions légales</a>
+            <a href="mailto:contact@ohmyfood.com" class="mailto">Contact</a>
+        </footer>
     </body>
 </html>

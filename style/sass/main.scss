@@ -8,6 +8,7 @@ $light-grey: #f2f2f2;
 
 /*sizing website*/
 body {
+    height: 100%;
     margin: auto;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -145,9 +146,9 @@ header {
 /*SECTION FUNCTION*/
 .function {
     text-align: center;
-    margin: 15px;
     h2 {
         text-align: left;
+        margin: 15px;
     }
     .choice {
         @include btn_choice();
@@ -197,50 +198,28 @@ header {
                 right: 35px;
             }
         }
-        .loving {
-           position: absolute;
-            top: 200px;
-            right: 35px;
-            font-size: 1.2rem;
-            padding: 0;
-            cursor: pointer;
-            transition: 400ms;
-            &:hover {
-                transform: scale(1.10);
-                font-weight: bold;
-                background: -webkit-linear-gradient($second-color, $first-color);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                opacity: 1;
-                z-index: 0;
-            }
-        }
-
     }
 }
 
-/*SECTION MENU*/
-.menu {
+.loving {
     position: absolute;
-    width: 100%;
-    border-radius: 25px 25px 0 0;
-    background-color: $light-grey;
-    top: 260px;
-    h2 {
-        margin: 0;
-        font-family: 'Shrikhand', cursive;
-        padding: 15px;
-        font-weight: lighter;
-        &::first-letter {
-            text-transform: uppercase;
-        }
-    }
-    .fa-heart {
-        position: absolute;
-        top: 25px;
-        right: 15px;
-    }
-}
+     top: 200px;
+     right: 35px;
+     font-size: 1.2rem;
+     padding: 0;
+     cursor: pointer;
+     transition: 400ms;
+     &:hover {
+         transform: scale(1.10);
+         font-weight: bold;
+         background: -webkit-linear-gradient($second-color, $first-color);
+         background-clip: text;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         opacity: 1;
+         z-index: 0;
+     }
+ }
 
 /*FOOTER*/
 .footer {
@@ -281,8 +260,84 @@ header {
     left: 1.2rem;
 }
 
+/*Style of all menu*/
+.menu {
+    padding: 0 10px;
+    &_title {
+        text-transform: uppercase;
+        color: grey;
+        font-weight: 300;
+        font-size: 20px;
+        text-decoration: underline $third-color;
+        text-align: left;
+        padding-left: 10px;
+    }
+}
+
+/*SECTION MENU*/
+.card_menu {
+    position: relative;
+    top: -2rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 25px 25px 0 0;
+    background-color: $light-grey;
+    h2 {
+        margin: 0;
+        font-family: 'Shrikhand', cursive;
+        padding: 15px;
+        font-weight: lighter;
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+    .fa-heart {
+        position: absolute;
+        top: 25px;
+        font-size: 1.2rem;
+        right: 15px;
+    }
+    .btn_command {
+        @include btn_primary();
+        margin: 40px auto;
+        cursor: pointer;
+    }
+}
+/*style of all plates proposition*/
+.menu_proposition {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    text-align: left;
+    box-shadow: 0px 3px 8px 1px #BDBDBD;
+    padding: 5px 10px;
+    margin: 10px 2px;
+    height: 50px;
+    .menu_description {
+        margin: 4px 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 85%;
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+    h3 {
+        font-size: 17px;
+    }
+    .price {
+        position: absolute;
+        top: 20px;
+        right: 5px;
+    }
+    .btn_okay {
+        visibility: hidden;
+    }
+}
+
 /*MEDIA QUERIES*/
-/*adptation for tablet device*/
+/*adaptation for tablet device*/
 
 @media screen and (min-width:760px) and (max-width:1024px) {
     .function {
