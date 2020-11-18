@@ -3,12 +3,106 @@
 /*sizing website*/
 body {
   height: 100%;
-  margin: auto;
+  margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
+/* ** PRELOADER ** */
+.body_preloader_img img {
+  position: relative;
+  margin: 0 auto;
+}
+
+#body_preloader {
+  -webkit-animation: body_preloader 2.5s both;
+  animation: body_preloader 2.5s both;
+}
+
+@keyframes body_preloader {
+  0% {
+    -webkit-transform: translateY(-500px);
+    transform: translateY(-500px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    -webkit-transform: translateY(-65px);
+    transform: translateY(-65px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  72% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  81% {
+    -webkit-transform: translateY(-28px);
+    transform: translateY(-28px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  90% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
 /*Buttons mixins*/
+/*fullpage loading spinner*/
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 3s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+  animation: tracking-in-expand 3s cubic-bezier(0.645, 0.045, 0.355, 1) both;
+}
+
+/*animation tracking-in-expand*/
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*for all links*/
 a, a:visited {
   text-decoration: none;
@@ -216,6 +310,7 @@ header h1 {
 .footer a {
   text-decoration: none;
   display: block;
+  color: #fff;
   padding: 5px 2rem;
 }
 .footer a:visited {
@@ -265,6 +360,7 @@ header h1 {
 }
 .card_menu h2 {
   margin: 0;
+  text-align: left;
   font-family: "Shrikhand", cursive;
   padding: 15px;
   font-weight: lighter;
@@ -304,7 +400,9 @@ header h1 {
 
 /*style of all plates proposition*/
 .menu_proposition {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   background-color: #fff;
   border-radius: 15px;
   text-align: left;
@@ -313,26 +411,57 @@ header h1 {
   margin: 10px 2px;
   height: 50px;
 }
-.menu_proposition .menu_description {
-  margin: 4px 2px;
+.menu_proposition:hover .menu_description {
+  width: 75%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 85%;
 }
-.menu_proposition .menu_description::first-letter {
+.menu_proposition:hover .price {
+  width: 10%;
+}
+.menu_proposition:hover .btn_okay {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 40px;
+  margin-top: -5px;
+  margin-left: 3%;
+}
+.menu_proposition .menu_description {
+  display: block;
+  margin: 4px 2px;
+  line-height: 0.5rem;
+  width: 83%;
+}
+.menu_proposition .menu_description h3, .menu_proposition .menu_description p {
+  margin: 0;
+  padding: 8px;
+  font-size: 17px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu_proposition .menu_description h3::first-letter, .menu_proposition .menu_description p::first-letter {
   text-transform: uppercase;
 }
-.menu_proposition h3 {
-  font-size: 17px;
-}
 .menu_proposition .price {
-  position: absolute;
-  top: 20px;
-  right: 5px;
+  display: flex;
+  justify-content: center;
+  width: 15%;
 }
 .menu_proposition .btn_okay {
-  visibility: hidden;
+  display: none;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  border: 1px solid #99E2D0;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+.menu_proposition .fa-check-circle {
+  color: #fff;
 }
 
 /*MEDIA QUERIES*/
