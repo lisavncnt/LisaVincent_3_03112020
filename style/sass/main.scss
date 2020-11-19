@@ -13,127 +13,29 @@ body {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-/* ** PRELOADER ** */
-#body {
-    background-color: #6cd8c9;
+/*Loading spinner fullpage*/
+.spinner {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(https://www.rbintlonline.com/giphy.gif);
+    background-color: lightgray;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 150px;
+    opacity: 75%;
+    z-index: 1;
+
+    animation: spinner 3s;
+    animation-fill-mode: both;
 }
 
-.body_preloader_img img {
-    height: 20rem;
-    position: relative;
-    top: 12rem;
-  }
-  
-  #body_preloader {
-    -webkit-animation: body_preloader 2.5s both;
-    animation: body_preloader 2.5s both;
-  }
-
-@-webkit-keyframes body_preloader {
-    0% {
-      -webkit-transform: translateY(-500px);
-      transform: translateY(-500px);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-      opacity: 0;
-    }
-    38% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-      opacity: 1;
-    }
-    55% {
-      -webkit-transform: translateY(-65px);
-      transform: translateY(-65px);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-    72% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-    }
-    81% {
-      -webkit-transform: translateY(-28px);
-      transform: translateY(-28px);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-    90% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-    }
-    95% {
-      -webkit-transform: translateY(-8px);
-      transform: translateY(-8px);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-    }
+@keyframes spinner {
+    from {opacity: 0.75;}
+    to {opacity: 0;}
 }
 
-@keyframes body_preloader {
-    0% {
-      -webkit-transform: translateY(-500px);
-      transform: translateY(-500px);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-      opacity: 0;
-    }
-    38% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-      opacity: 1;
-    }
-    55% {
-      -webkit-transform: translateY(-65px);
-      transform: translateY(-65px);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-    72% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-    }
-    81% {
-      -webkit-transform: translateY(-28px);
-      transform: translateY(-28px);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-    90% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-    }
-    95% {
-      -webkit-transform: translateY(-8px);
-      transform: translateY(-8px);
-      -webkit-animation-timing-function: ease-in;
-      animation-timing-function: ease-in;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
-      -webkit-animation-timing-function: ease-out;
-      animation-timing-function: ease-out;
-    }
-}
+
 /*Buttons mixins*/
 @mixin btn_primary {
     width: 200px;
@@ -213,7 +115,7 @@ a, a:visited {
 header {
     font-family: 'Shrikhand', cursive;
     text-align: center;
-    margin-top: 25px;
+    padding-top: 25px;
     h1 {
         margin: 0;
         padding-bottom: 20px;
