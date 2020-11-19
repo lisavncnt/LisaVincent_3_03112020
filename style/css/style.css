@@ -224,7 +224,6 @@ header h1 {
   transform: scale(1.1);
   font-weight: bold;
   background: -webkit-linear-gradient(#FF79DA, #9356DC);
-  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 1;
@@ -233,7 +232,7 @@ header h1 {
 
 /*FOOTER*/
 .footer {
-  background-color: black;
+  background-color: #424242;
   color: #fff;
   padding: 1.5rem 0;
 }

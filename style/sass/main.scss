@@ -245,7 +245,6 @@ header {
          transform: scale(1.10);
          font-weight: bold;
          background: -webkit-linear-gradient($second-color, $first-color);
-         background-clip: text;
          -webkit-background-clip: text;
          -webkit-text-fill-color: transparent;
          opacity: 1;
@@ -255,7 +254,7 @@ header {
 
 /*FOOTER*/
 .footer {
-    background-color: black;
+    background-color: #424242;
     color: #fff;
     padding: 1.5rem 0;
     h3 {
