@@ -27,12 +27,19 @@ body {
     z-index: 1;
 
     animation: spinner 3s;
-    animation-fill-mode: both;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes spinner {
-    from {opacity: 0.75;}
-    to {opacity: 0;}
+    0% {
+        visibility: visible;
+        opacity: 0.75;
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+    }
 }
 
 
